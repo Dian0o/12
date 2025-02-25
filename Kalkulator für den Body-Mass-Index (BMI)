@@ -1,0 +1,17 @@
+def bmi_berechnen(gewicht, groesse):
+    return gewicht / (groesse ** 2)
+
+gewicht = float(input("Gib dein Gewicht in kg ein: "))
+groesse = float(input("Gib deine Größe in Metern ein (z.B. 1.75): "))
+
+bmi = bmi_berechnen(gewicht, groesse)
+print(f"Dein BMI ist: {bmi:.2f}")
+
+if bmi < 18.5:
+    print("Untergewicht")
+elif 18.5 <= bmi < 24.9:
+    print("Normalgewicht")
+elif 25 <= bmi < 29.9:
+    print("Übergewicht")
+else:
+    print("Adipositas")
