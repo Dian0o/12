@@ -1,0 +1,8 @@
+def fibonacci(n):
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+
+n = int(input("Gib die Anzahl der Fibonacci-Zahlen ein: "))
+print("Die ersten", n, "Fibonacci-Zahlen:", fibonacci(n))
