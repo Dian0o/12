@@ -1,0 +1,4 @@
+höhe = int(input("Gib die Höhe der Pyramide ein: "))
+
+for i in range(1, höhe + 1):
+    print(" " * (höhe - i) + "*" * (2 * i - 1))
