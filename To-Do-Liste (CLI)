@@ -1,0 +1,26 @@
+todo_liste = []
+
+while True:
+    print("\n1. Aufgabe hinzufügen\n2. Aufgaben anzeigen\n3. Aufgabe löschen\n4. Beenden")
+    wahl = input("Wähle eine Option: ")
+
+    if wahl == "1":
+        aufgabe = input("Gib eine Aufgabe ein: ")
+        todo_liste.append(aufgabe)
+        print("Aufgabe hinzugefügt!")
+    elif wahl == "2":
+        print("\nTo-Do-Liste:")
+        for i, aufgabe in enumerate(todo_liste, start=1):
+            print(f"{i}. {aufgabe}")
+    elif wahl == "3":
+        aufgaben_nr = int(input("Nummer der zu löschenden Aufgabe: ")) - 1
+        if 0 <= aufgaben_nr < len(todo_liste):
+            del todo_liste[aufgaben_nr]
+            print("Aufgabe gelöscht!")
+        else:
+            print("Ungültige Nummer!")
+    elif wahl == "4":
+        print("Programm beendet.")
+        break
+    else:
+        print("Ungültige Auswahl!")
