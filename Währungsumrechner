@@ -1,0 +1,20 @@
+def eur_to_usd(eur):
+    return eur * 1.09  # Beispiel: 1 EUR = 1.09 USD
+
+def usd_to_eur(usd):
+    return usd / 1.09  # Beispiel: 1 USD = 0.917 EUR
+
+print("Wähle die Umrechnung: ")
+print("1. Euro zu US-Dollar")
+print("2. US-Dollar zu Euro")
+
+wahl = input("Option eingeben (1/2): ")
+
+if wahl == "1":
+    eur = float(input("Gib den Betrag in Euro ein: "))
+    print(f"{eur} EUR sind {eur_to_usd(eur):.2f} USD.")
+elif wahl == "2":
+    usd = float(input("Gib den Betrag in US-Dollar ein: "))
+    print(f"{usd} USD sind {usd_to_eur(usd):.2f} EUR.")
+else:
+    print("Ungültige Auswahl!")
