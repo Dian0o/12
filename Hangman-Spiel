@@ -1,0 +1,25 @@
+import random
+
+woerter = ["python", "computer", "programmieren", "spiel", "entwickler"]
+wort = random.choice(woerter)
+erraten = ["_"] * len(wort)
+versuche = 6
+
+print("Willkommen zu Hangman!")
+
+while versuche > 0 and "_" in erraten:
+    print(" ".join(erraten))
+    buchstabe = input("Rate einen Buchstaben: ").lower()
+
+    if buchstabe in wort:
+        for i in range(len(wort)):
+            if wort[i] == buchstabe:
+                erraten[i] = buchstabe
+    else:
+        versuche -= 1
+        print(f"Falsch! Noch {versuche} Versuche übrig.")
+
+if "_" not in erraten:
+    print(f"Glückwunsch! Du hast das Wort '{wort}' erraten!")
+else:
+    print(f"Leider verloren! Das Wort war '{wort}'.")
